@@ -1,0 +1,25 @@
+%%{ init: { "theme": "neutral" } }%%
+
+graph TD;
+    T( ) --> L( );
+    T( ) --> R( );
+
+    L --> LL( );
+    L --> LR( );
+    R --> RL( );
+    R --> RR( );
+
+    LL --> A(A)
+    LL --> B(B)
+    LR --> C(C)
+    LR --> D(D);
+
+    RL --> E(E)
+    RL --> F(F)
+    RR --> G(G)
+    RR --> H(H)
+
+    style T fill:#AADDFF,stroke-dasharray: 5 5
+    style L fill:#AADDFF,stroke-dasharray: 5 5
+    style LL fill:#AADDFF,stroke-dasharray: 5 5
+    style A fill:#AADDFF,stroke-dasharray: 5 5

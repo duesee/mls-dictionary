@@ -23,10 +23,8 @@
   <summary><a name="concept_direct_path">Direct path (of a node)</a></summary>
   
   ### Example:
-  
-  Direct path of node A.
 
-  [mermaid_direct_path]
+  ![Direct path from node A (Diagram)](direct_path.mmd)
 </details>
 
 ## I

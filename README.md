@@ -17,6 +17,14 @@
   The hash of a `Commit` (and a `Proposal` to obtain a `ProposalRef`) is calculated over the `MLSAuthenticatedContent` in which it was sent.
 </details>
 
+<details>
+  <summary><a name="concept_copath">Copath (of a node)</a></summary>
+  
+  ### Example:
+
+  ![Copath from node A (Diagram)](copath.mmd)
+</details>
+
 ## D
 
 <details>

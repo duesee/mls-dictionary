@@ -35,6 +35,18 @@
   ![Direct path from node A (Diagram)](direct_path.mmd)
 </details>
 
+## F
+
+<details>
+  <summary><a name="concept_filtered_direct_path">Filtered direct path (of a node)</a></summary>
+  
+  TODO: Broken example.
+  
+  ### Example:
+
+  ![Filtered direct path from node A (Diagram)](filtered_direct_path.mmd)
+</details>
+
 ## I
 
 <details>

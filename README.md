@@ -1,4 +1,4 @@
-# MLS Dictionary
+# MLS Dictionary (draft-ietf-mls-protocol-16)
 
 ## C
 
@@ -11,9 +11,9 @@
 <details>
   <summary>Confirmed Transcript Hash</summary>
   
-  A running hash over the whole history of Commit messages, up to and including the signature of the most recent Commit.
-  Commit messages are included directly. Proposal messages are indirectly included via the Commit that applied them.
-  Both types of message are included by hashing the MLSAuthenticatedContent object in which they were sent.
+  A running (chained) hash over the whole history of `Commit` messages including the most recent `Commit`. 
+  `Proposal`s are indirectly included through the `ProposalRef`s in the `Commit` that applied them.
+  The hash of a `Commit` (and a `Proposal` to obtain a `ProposalRef`) is calculated over the `MLSAuthenticatedContent` in which it was sent.
 </details>
 
 ## I

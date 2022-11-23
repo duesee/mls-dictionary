@@ -5,7 +5,8 @@
 <details>
   <summary>Confirmation Tag</summary>
   
-  ...
+  A MAC (calculated by using the `confirmation_key`) over the confirmed transcript hash.
+  It confirms that the members of the group have arrived at the same state of the group, because the confirmed transcript hash covers every commit (and indirectly also all proposal).
 </details>
 
 <details>

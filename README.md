@@ -77,3 +77,9 @@
   
   ...
 </details>
+
+<details>
+  <summary><a name="concept_update_path">Update Path</a></summary>
+  
+  ...
+</details>

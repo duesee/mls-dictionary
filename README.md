@@ -28,6 +28,13 @@
 ## D
 
 <details>
+  <summary><a name="concept_descendants">Descendants (of a node)</a></summary>
+  
+  ...
+</details>
+
+
+<details>
   <summary><a name="concept_direct_path">Direct path (of a node)</a></summary>
   
   ### Example:
@@ -60,7 +67,7 @@
 <details>
   <summary><a name="concept_resolution">Resolution (of a node)</a></summary>
   
-  An ordered list of non-blank nodes that collectively cover all non-blank descendants of the node.
+  An ordered list of non-blank nodes that collectively cover all non-blank [descendants](#concept_descendants) of the node.
 </details>
 
 ## U

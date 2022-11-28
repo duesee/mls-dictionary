@@ -42,6 +42,20 @@
   ![Direct path from node A (Diagram)](direct_path.mmd)
 </details>
 
+## E
+
+<details>
+  <summary><a name="concept_external_commit">External commit</a></summary>
+  
+  A mechanism for new members (external parties that want to become members of the group) to add themselves to a group, without requiring that an existing member has to come online to issue a Commit that references an Add Proposal. New members can create an External Commit if they have access to the current group info (that contains an ExternalPub extension). External Commits work like regular Commits, however, their content has to meet a specific set of requirements.
+</details>
+
+<details>
+  <summary><a name="concept_external_init">ExternalInit (proposal)</a></summary>
+  
+  A proposal used by new members that want to join a group by using an external commit. This proposal can only be used in that context.
+</details>
+
 ## F
 
 <details>

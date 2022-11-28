@@ -3,6 +3,12 @@
 ## C
 
 <details>
+  <summary><a name="concept_commit">Commit</a></summary>
+  
+...
+</details>
+
+<details>
   <summary><a name="concept_confirmation_tag">Confirmation tag</a></summary>
   
   A MAC over the [confirmed transcript hash](#concept_confirmed_transcript_hash) (calculated by using the `confirmation_key`).
@@ -81,6 +87,14 @@
   <summary><a name="concept_interim_transcript_hash">Interim transcript hash</a></summary>
   
   A hash that covers the [confirmed transcript hash](#concept_confirmed_transcript_hash) plus the [confirmation tag](#concept_confirmation_tag) of the most recent Commit.
+</details>
+
+## P
+
+<details>
+  <summary><a name="concept_proposal">Proposal</a></summary>
+  
+...
 </details>
 
 ## R

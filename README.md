@@ -51,9 +51,9 @@
 </details>
 
 <details>
-  <summary><a name="concept_external_init">ExternalInit (proposal)</a></summary>
+  <summary><a name="proposal_external_init">ExternalInit (Proposal)</a></summary>
   
-  A proposal used by new members that want to join a group by using an external commit. This proposal can only be used in that context.
+  A proposal used by new members to join a group by using an [external commit](#concept_external_commit). This proposal can only be used in that context.
 </details>
 
 ## F

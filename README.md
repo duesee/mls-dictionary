@@ -68,6 +68,13 @@
   ![Filtered direct path from node A (Diagram)](filtered_direct_path.mmd)
 </details>
 
+<details>
+  <summary><a name="term_full_commit">"Full" commit</a></summary>
+  
+  A commit that contains contain a `path` field.
+</details>
+
+
 ## I
 
 <details>

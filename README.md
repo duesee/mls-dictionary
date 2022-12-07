@@ -110,7 +110,8 @@
 <details>
   <summary><a name="concept_unmerged_leaf">Unmerged leaf</a></summary>
   
-  ...
+  The unmerged leaves array is a bookkeeping procedure to remember leaves that were added after a node was last updated.
+  Used in resolution and parent-hash verification. (Description shamelessly copied from an email Théophile Wallez wrote to mls@ietf.org.)
 </details>
 
 <details>

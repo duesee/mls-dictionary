@@ -89,6 +89,17 @@
   A hash that covers the [confirmed transcript hash](#concept_confirmed_transcript_hash) plus the [confirmation tag](#concept_confirmation_tag) of the most recent Commit.
 </details>
 
+## K
+
+<details>
+  <summary><a name="key_package">Key package</a></summary>
+  
+  A (signed) data structure containing (pre-published) public information about a user. Notably, it contains a public key ("init key") that others can use to encrypt a [Welcome message] to this user. It also contains the content of the [leaf node] that should be added to the tree representing the user.
+</details>
+
+ KeyPackages are intended to be used only once and SHOULD NOT be reused  The whole structure is signed using the client's signature key. 
+
+
 ## P
 
 <details>

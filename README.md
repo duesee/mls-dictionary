@@ -125,5 +125,28 @@
 <details>
   <summary><a name="concept_update_path">Update path</a></summary>
   
-  ...
+  ```c
+  struct {
+      opaque kem_output<V>;
+      opaque ciphertext<V>;
+  } HPKECiphertext;
+
+  struct {
+      HPKEPublicKey encryption_key;
+      HPKECiphertext encrypted_path_secret<V>;
+  } UpdatePathNode;
+
+  struct {
+      LeafNode leaf_node;
+      UpdatePathNode nodes<V>;
+  } UpdatePath;
+
+  struct {
+      ProposalOrRef proposals<V>;
+      optional<UpdatePath> path;
+  } Commit;
+  ```
+  
+  Only add, psk, reinit proposals do not require path.
+  
 </details>

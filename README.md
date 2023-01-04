@@ -67,6 +67,8 @@
 <details>
   <summary><a name="concept_filtered_direct_path">Filtered direct path (of a node)</a></summary>
   
+  The filtered direct path of a leaf node L is the node's [direct path](#concept_direct_path), with any node removed whose child on the [copath](#concept_copath) of L has an empty [resolution](#concept_resolution) (keeping in mind that any [unmerged leaves](#concept_unmerged_leaf) of the copath child count toward its resolution). The removed nodes do not need their own key pairs because encrypting to the node's key pair would be equivalent to encrypting to its non-copath child.
+  
   TODO: Broken example.
   
   ### Example:

@@ -9,6 +9,13 @@
 </details>
 
 <details>
+  <summary><a name="concept_commit_secret">Commit secret</a></summary>
+  
+  `path_secret[n+1]`
+</details>
+
+
+<details>
   <summary><a name="concept_confirmation_tag">Confirmation tag</a></summary>
   
   A MAC over the [confirmed transcript hash](#concept_confirmed_transcript_hash) (calculated by using the `confirmation_key`).

@@ -14,7 +14,6 @@
   `path_secret[n+1]`
 </details>
 
-
 <details>
   <summary><a name="concept_confirmation_tag">Confirmation tag</a></summary>
   
@@ -48,7 +47,6 @@
   ...
 </details>
 
-
 <details>
   <summary><a name="concept_direct_path">Direct path (of a node)</a></summary>
   
@@ -60,6 +58,12 @@
 </details>
 
 ## E
+
+<details>
+  <summary><a name="term_empty_commit">"Empty" commit</a></summary>
+
+  A commit that references no proposals.
+</details>
 
 <details>
   <summary><a name="concept_external_commit">External commit</a></summary>
@@ -90,9 +94,8 @@
 <details>
   <summary><a name="term_full_commit">"Full" commit</a></summary>
   
-  A commit that contains a `path` field (see [Update path](#concept_update_path)).
+  A [commit](#concept_commit) that contains a `path` field (see [Update path](#concept_update_path)).
 </details>
-
 
 ## I
 
@@ -111,6 +114,12 @@
 </details>
 
 ## P
+
+<details>
+  <summary><a name="term_partial_commit">"Partial" commit</a></summary>
+
+  A commit that references proposals that do not require a path, and where the path is empty (see [Update path](#concept_update_path)).
+</details>
 
 <details>
   <summary><a name="concept_proposal">Proposal</a></summary>

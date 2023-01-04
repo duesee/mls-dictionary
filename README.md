@@ -26,6 +26,8 @@
 <details>
   <summary><a name="concept_copath">Copath (of a node)</a></summary>
   
+  The copath of a node is the node's sibling concatenated with the list of siblings of all the nodes in its direct path, excluding the root.
+  
   ### Example:
 
   ![Copath from node A (Diagram)](copath.mmd)
@@ -42,6 +44,8 @@
 
 <details>
   <summary><a name="concept_direct_path">Direct path (of a node)</a></summary>
+  
+  The direct path of a root is the empty list, and of any other node is the concatenation of that node's parent along with the parent's direct path.
   
   ### Example:
 

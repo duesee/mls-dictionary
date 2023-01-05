@@ -135,6 +135,14 @@
   An ordered list of non-blank nodes that collectively cover all non-blank [descendants](#concept_descendants) of the node.
 </details>
 
+## T
+
+<details>
+  <summary><a name="concept_tree_invariant">Tree invariant</a></summary>
+  
+  The private key for a node in the tree is known to a member of the group only if the node's subtree contains that member's leaf.
+</details>
+
 ## U
 
 <details>

@@ -97,6 +97,21 @@
   A [commit](#concept_commit) that contains a `path` field (see [Update path](#concept_update_path)).
 </details>
 
+## G
+
+<details>
+  <summary><a name="term_group_info">Group info</a></summary>
+  
+  A structure that can be used to join a group through a [Welcome] or an [External Commit].
+  
+  Two extensions are allowed:
+  * external_pub (extension): The public key `external_pub` can be published in the `external_pub` extension to allow non-members to join the group using an external commit.
+  * ratchet_tree (extension): By default, a group info only provides the joiner with a hash of the group's ratchet tree. Thus, the joiner will need to get a copy of the ratchet tree from some source. With this extensions the ratchet tree can be included directly in the group info.
+
+  Previous names:
+  * ~PublicGroupState (PGS)~
+</details>
+
 ## I
 
 <details>

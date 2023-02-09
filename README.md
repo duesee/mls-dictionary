@@ -68,13 +68,19 @@
 <details>
   <summary><a name="concept_external_commit">External commit</a></summary>
   
-  A mechanism for new members (external parties that want to become members of the group) to add themselves to a group, without requiring that an existing member has to come online to issue a Commit that references an Add Proposal. New members can create an External Commit if they have access to the current group info (that contains an ExternalPub extension). External Commits work like regular Commits, however, their content has to meet a specific set of requirements.
+  A mechanism for new members (external parties that want to become members of the group) to add themselves to a group, without requiring that an existing member has to come online to issue a Commit that references an Add Proposal. New members can create an External Commit if they have access to the current [group info](#structure_group_info) (that contains an [`external_pub` extension](#extension_external_pub)). External Commits work like regular Commits, however, their content has to meet a specific set of requirements.
 </details>
 
 <details>
   <summary><a name="proposal_external_init">ExternalInit (<a href="#concept_proposal">Proposal</a>)</a></summary>
   
   A proposal used by new members to join a group by using an [external commit](#concept_external_commit). This proposal can only be used in that context.
+</details>
+
+<details>
+  <summary><a name="extension_external_pub"><code>external_pub</code> (extension)</a></summary>
+
+  A [group info](#structure_group_info) extension required to allow external commits.
 </details>
 
 ## F
@@ -100,13 +106,13 @@
 ## G
 
 <details>
-  <summary><a name="term_group_info">Group info</a></summary>
+  <summary><a name="structure_group_info">Group info</a></summary>
   
-  A structure that can be used to join a group through a [Welcome] or an [External Commit].
-  
+  A structure that holds information to bootstrap a local group state when joining through a [Welcome] or an [External Commit].
+   
   Two extensions are allowed:
-  * external_pub (extension): The public key `external_pub` can be published in the `external_pub` extension to allow non-members to join the group using an external commit.
-  * ratchet_tree (extension): By default, a group info only provides the joiner with a hash of the group's ratchet tree. Thus, the joiner will need to get a copy of the ratchet tree from some source. With this extensions the ratchet tree can be included directly in the group info.
+  * [`external_pub`](#extension_external_pub): The public key `external_pub` can be published in the `external_pub` extension to allow non-members to join the group using an external commit.
+  * [`ratchet_tree`](#extension_ratchet_tree): By default, a group info only provides the joiner with a hash of the group's ratchet tree. Thus, the joiner will need to get a copy of the ratchet tree from some source. With this extensions the ratchet tree can be included directly in the group info.
 
   Previous names:
   * ~PublicGroupState (PGS)~
@@ -143,6 +149,12 @@
 </details>
 
 ## R
+
+<details>
+  <summary><a name="extension_ratchet_tree"><code>ratchet_tree</code> (extension)</a></summary>
+  
+  A [group info](#structure_group_info) extension that holds the ratchet tree used for [welcome] or [external commits].
+</details>
 
 <details>
   <summary><a name="concept_resolution">Resolution (of a node)</a></summary>

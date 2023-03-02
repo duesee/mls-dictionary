@@ -34,9 +34,54 @@
   
   The copath of a node is the node's sibling concatenated with the list of siblings of all the nodes in its direct path, excluding the root.
   
-  ### Example:
 
-  ![Copath from node A (Diagram)](copath.mmd)
+  ### Example (A):
+
+```mermaid
+%%{ init: { "theme": "neutral" } }%%
+
+graph TD;
+    N0("0 (A)")
+    N1("1")
+    N2("2 (B)")
+    N3("3")
+    N4("4 (C)")
+    N5("5")
+    N6("6 (D)")
+    N7("7")
+    N8("8 (E)")
+    N9("9")
+    N10("10 (F)")
+    N11("11")
+    N12("12 (G)")
+    N13("13")
+    N14("14 (H)")
+    
+    N7 --> N3
+    N7 --> N11
+    
+    N3 --> N1
+    N3 --> N5
+    N11 --> N9
+    N11 --> N13
+
+    N1 --> N0
+    N1 --> N2
+    N5 --> N4
+    N5 --> N6
+    N9 --> N8
+    N9 --> N10
+    N13 --> N12
+    N13 --> N14
+
+    style N0 fill:#ffffff,stroke-dasharray: 5 5
+    style N2 fill:#aaaaff,stroke-dasharray: 5 5
+    style N5 fill:#aaaaff,stroke-dasharray: 5 5
+    style N11 fill:#aaaaff,stroke-dasharray: 5 5
+    style N7 fill:#ffffff,stroke-dasharray: 5 5
+
+```
+  
 </details>
 
 ## D

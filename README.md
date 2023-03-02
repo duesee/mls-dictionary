@@ -139,7 +139,7 @@ graph TD;
     style N0 fill:#ffffff,stroke-dasharray: 5 5
     style N1 fill:#aaaaff,stroke-dasharray: 5 5
     style N3 fill:#aaaaff,stroke-dasharray: 5 5
-    style N7 fill:#ffffff,stroke-dasharray: 5 5
+    style N7 fill:#aaaaff,stroke-dasharray: 5 5
 ```
   
   ### Example (F)
@@ -184,7 +184,7 @@ graph TD;
     style N10 fill:#ffffff,stroke-dasharray: 5 5
     style N9 fill:#aaaaff,stroke-dasharray: 5 5
     style N11 fill:#aaaaff,stroke-dasharray: 5 5
-    style N7 fill:#ffffff,stroke-dasharray: 5 5
+    style N7 fill:#aaaaff,stroke-dasharray: 5 5
 ```
   
 </details>
@@ -276,7 +276,7 @@ graph TD;
     style N0 fill:#ffffff,stroke-dasharray: 5 5
     style N1 fill:#aaaaff,stroke-dasharray: 5 5
     style N3 fill:#aaaaff,stroke-dasharray: 5 5
-    style N7 fill:#ffffff,stroke-dasharray: 5 5
+    style N7 fill:#aaaaff,stroke-dasharray: 5 5
 
     style N2 fill:#ddaaaa,stroke-dasharray: 5 5
     style N5 fill:#ddaaaa,stroke-dasharray: 5 5

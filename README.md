@@ -422,6 +422,10 @@ graph TD;
 <details>
   <summary><a name="concept_update_path">Update path</a></summary>
   
+  An `UpdatePath` is a structure that contains all information required to process an update from another member.
+  Notably, it contains the new leaf node and all public keys for the (filtered) direct path of the sender that issued the update.
+  However, it also contains private HPKE keys for the updated nodes in an encrypted form such that they can only be decrypted by the correct members.
+
   ```c
   struct {
       opaque kem_output<V>;
@@ -429,12 +433,12 @@ graph TD;
   } HPKECiphertext;
 
   struct {
-      HPKEPublicKey encryption_key;
-      HPKECiphertext encrypted_path_secret<V>;
+      HPKEPublicKey encryption_key; // Public HPKE key for updated node.
+      HPKECiphertext encrypted_path_secret<V>; // Private HPKE key for updated node (encrypted multiple times to all "appropriate" members.)
   } UpdatePathNode;
 
   struct {
-      LeafNode leaf_node;
+      LeafNode leaf_node; // The updated (new) leaf node.
       UpdatePathNode nodes<V>;
   } UpdatePath;
 

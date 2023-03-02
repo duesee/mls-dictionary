@@ -222,9 +222,19 @@ graph TD;
   
   The filtered direct path of a leaf node L is the node's [direct path](#concept_direct_path), with any node removed whose child on the [copath](#concept_copath) of L has an empty [resolution](#concept_resolution).
   
-  Idea: The removed nodes do not need their own key pairs because encrypting to the node's key pair would be equivalent to encrypting to its non-copath child.
   
-  ### Example:
+  Idea: The removed nodes do not need their own key pairs because encrypting to the node's key pair would be equivalent to encrypting to its non-copath child.
+
+  ### FAQ
+  
+  * "Which child on the copath of L? Arn't there always two children?" -> There is exactly one "child on the copath of L", thus we do not to say which one, left or right. The picture below makes this clearer.
+
+  ### Example (A)
+
+* `[1, 3] == direct_path(0)`
+* `[2, 5, 11] == copath(0)`
+
+* `[1] == filtered_direct_path(0)`
 
 ```mermaid
 %%{ init: { "theme": "neutral" } }%%
@@ -235,7 +245,7 @@ graph TD;
     N2("2 (B)")
     N3("3 (filtered out)")
     N4("_")
-    N5("_")
+    N5("_ (5)")
     N6("_")
     N7("7")
     N8("8 (E)")

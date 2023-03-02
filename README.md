@@ -231,10 +231,10 @@ graph TD;
 
   ### Example (A)
 
-* `[1, 3] == direct_path(0)`
+* `[1, 3, 7] == direct_path(0)`
 * `[2, 5, 11] == copath(0)`
 
-* `[1] == filtered_direct_path(0)`
+* `[1, 7] == filtered_direct_path(0)`
 
 ```mermaid
 %%{ init: { "theme": "neutral" } }%%

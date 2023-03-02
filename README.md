@@ -220,13 +220,60 @@ graph TD;
 <details>
   <summary><a name="concept_filtered_direct_path">Filtered direct path (of a node)</a></summary>
   
-  The filtered direct path of a leaf node L is the node's [direct path](#concept_direct_path), with any node removed whose child on the [copath](#concept_copath) of L has an empty [resolution](#concept_resolution) (keeping in mind that any [unmerged leaves](#concept_unmerged_leaf) of the copath child count toward its resolution). The removed nodes do not need their own key pairs because encrypting to the node's key pair would be equivalent to encrypting to its non-copath child.
+  The filtered direct path of a leaf node L is the node's [direct path](#concept_direct_path), with any node removed whose child on the [copath](#concept_copath) of L has an empty [resolution](#concept_resolution).
   
-  TODO: Broken example.
+  Idea: The removed nodes do not need their own key pairs because encrypting to the node's key pair would be equivalent to encrypting to its non-copath child.
   
   ### Example:
 
-  ![Filtered direct path from node A (Diagram)](filtered_direct_path.mmd)
+```mermaid
+%%{ init: { "theme": "neutral" } }%%
+
+graph TD;
+    N0("0 (A)")
+    N1("1")
+    N2("2 (B)")
+    N3("3 (filtered out)")
+    N4("_")
+    N5("_")
+    N6("_")
+    N7("7")
+    N8("8 (E)")
+    N9("9")
+    N10("10 (F)")
+    N11("11")
+    N12("12 (G)")
+    N13("13")
+    N14("14 (H)")
+    
+    N7 --> N3
+    N7 --> N11
+    
+    N3 --> N1
+    N3 --> N5
+    N11 --> N9
+    N11 --> N13
+
+    N1 --> N0
+    N1 --> N2
+    N5 --> N4
+    N5 --> N6
+    N9 --> N8
+    N9 --> N10
+    N13 --> N12
+    N13 --> N14
+
+    style N0 fill:#ffffff,stroke-dasharray: 5 5
+    style N1 fill:#aaaaff,stroke-dasharray: 5 5
+    style N3 fill:#aaaaff,stroke-dasharray: 5 5
+    style N7 fill:#ffffff,stroke-dasharray: 5 5
+
+    style N2 fill:#ddaaaa,stroke-dasharray: 5 5
+    style N5 fill:#ddaaaa,stroke-dasharray: 5 5
+    style N11 fill:#ddaaaa,stroke-dasharray: 5 5
+    
+```
+
 </details>
 
 <details>

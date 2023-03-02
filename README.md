@@ -292,6 +292,57 @@ graph TD;
   <summary><a name="concept_resolution">Resolution (of a node)</a></summary>
   
   An ordered list of non-blank nodes that collectively cover all non-blank [descendants](#concept_descendants) of the node.
+
+  Alternativ: A depth-first, left-first enumeration of the *nearest* non-blank nodes that "collectively cover" all non-blank descendants. Collectively cover means that the covering node is an ancestor of every covered node.
+  
+  Note: The resolution of a non-blank node comprises the node itself, followed by its list of unmerged leaves, if any.
+  
+  ### Example (resolution of 11)
+
+```mermaid
+%%{ init: { "theme": "neutral" } }%%
+
+graph TD;
+    N0("0 (A)")
+    N1("1")
+    N2("2 (B)")
+    N3("3")
+    N4("4 (C)")
+    N5("5")
+    N6("6 (D)")
+    N7("7")
+    N8("8 (E)")
+    N9("9")
+    N10("_")
+    N11("(resolution of) 11")
+    N12("12 (G)")
+    N13("_")
+    N14("14 (H)")
+    
+    N7 --> N3
+    N7 --> N11
+    
+    N3 --> N1
+    N3 --> N5
+    N11 --> N9
+    N11 --> N13
+
+    N1 --> N0
+    N1 --> N2
+    N5 --> N4
+    N5 --> N6
+    N9 --> N8
+    N9 --> N10
+    N13 --> N12
+    N13 --> N14
+
+    style N11 fill:#aaaaff,stroke-dasharray: 5 5
+    style N8 fill:#aaaaaa,stroke-dasharray: 5 5
+    style N9 fill:#aaaaff,stroke-dasharray: 5 5
+    style N12 fill:#aaaaff,stroke-dasharray: 5 5
+    style N14 fill:#aaaaff,stroke-dasharray: 5 5
+```
+
 </details>
 
 ## T

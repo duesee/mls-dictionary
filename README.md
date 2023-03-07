@@ -90,6 +90,8 @@
   A running (chained) hash over the whole history of `Commit` messages including the most recent `Commit`. 
   `Proposal`s are indirectly included through the `ProposalRef`s in the `Commit` that applied them.
   The hash of a `Commit` (and a `Proposal` to obtain a `ProposalRef`) is calculated over the `MLSAuthenticatedContent` in which it was sent.
+  
+  See https://github.com/mlswg/mls-protocol/pull/855.
 </details>
 
 <details>
@@ -376,6 +378,8 @@ graph TD;
   <summary><a name="concept_interim_transcript_hash">Interim transcript hash</a></summary>
   
   A hash that covers the [confirmed transcript hash](#concept_confirmed_transcript_hash) plus the [confirmation tag](#concept_confirmation_tag) of the most recent Commit.
+  
+  See https://github.com/mlswg/mls-protocol/pull/855.
 </details>
 
 ## K

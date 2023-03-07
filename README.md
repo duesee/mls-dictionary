@@ -7,7 +7,7 @@
   
   ...
   
-  ### Ciphersuites
+### Ciphersuites
   
 | Value           | Name                                                | R | Ref      |
 |-----------------|-----------------------------------------------------|---|----------|
@@ -21,7 +21,7 @@
 | 0x0007          | MLS_256_DHKEMP384_AES256GCM_SHA384_P384.            | Y | RFC XXXX |
 | 0xf000 - 0xffff | Reserved for Private Use                            | - | RFC XXXX |
 
-##### Ciphersuites (Composition)
+#### Ciphersuites (Composition)
 
 | Value  | KEM    | KDF    | AEAD   | Hash   | Signature              |
 |--------|--------|--------|--------|--------|------------------------|
@@ -33,11 +33,11 @@
 | 0x0006 | 0x0021 | 0x0003 | 0x0003 | SHA512 | ed448                  |
 | 0x0007 | 0x0011 | 0x0002 | 0x0002 | SHA384 | ecdsa_secp384r1_sha384 |
 
-##### KEM
+#### KEM
 
 ...
 
-##### Key Derivation Functions (KDFs)
+#### Key Derivation Functions (KDFs)
   
 | Value  | KDF         | Nh  | Reference |
 |--------|-------------|-----|-----------|
@@ -46,9 +46,15 @@
 | 0x0002 | HKDF-SHA384 | 48  | RFC 5869  |
 | 0x0003 | HKDF-SHA512 | 64  | RFC 5869  |
 
-##### AEAD
+#### AEAD
 
-...
+| Value  | AEAD             | Nk  | Nn  | Nt  | Reference |
+|--------|------------------|-----|-----|-----|-----------|
+| 0x0000 | Reserved         | N/A | N/A | N/A | RFC 9180  |
+| 0x0001 | AES-128-GCM      | 16  | 12  | 16  | [GCM]     |
+| 0x0002 | AES-256-GCM      | 32  | 12  | 16  | [GCM]     |
+| 0x0003 | ChaCha20Poly1305 | 32  | 12  | 16  | RFC 8439  |
+| 0xFFFF | Export-only      | N/A | N/A | N/A | RFC 9180  |
 
 </details>
 

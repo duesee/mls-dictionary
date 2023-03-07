@@ -35,7 +35,13 @@
 
 #### KEM
 
-...
+| 0x0000 | Reserved                   | N/A | N/A | N/A | N/A | yes | RFC 9180               |
+|--------|----------------------------|-----|-----|-----|-----|-----|------------------------|
+| 0x0010 | DHKEM(P-256, HKDF-SHA256)  | 32  | 65  | 65  | 32  | yes | [NISTCurves], RFC 5869 |
+| 0x0011 | DHKEM(P-384, HKDF-SHA384)  | 48  | 97  | 97  | 48  | yes | [NISTCurves], RFC 5869 |
+| 0x0012 | DHKEM(P-521, HKDF-SHA512)  | 64  | 133 | 133 | 66  | yes | [NISTCurves], RFC 5869 |
+| 0x0020 | DHKEM(X25519, HKDF-SHA256) | 32  | 32  | 32  | 32  | yes | RFC 5869, RFC 7748     |
+| 0x0021 | DHKEM(X448, HKDF-SHA512)   | 64  | 56  | 56  | 56  | yes | RFC 5869, RFC 7748     |
 
 #### Key Derivation Functions (KDFs)
   

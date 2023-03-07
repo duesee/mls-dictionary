@@ -3,6 +3,56 @@
 ## C
 
 <details>
+  <summary><a name="concept_ciphersuite">Ciphersuite</a></summary>
+  
+  ...
+  
+  ### Ciphersuites
+  
+| Value           | Name                                                | R | Ref      |
+|-----------------|-----------------------------------------------------|---|----------|
+| 0x0000          | RESERVED                                            | - | RFC XXXX |
+| 0x0001          | MLS_128_DHKEMX25519_AES128GCM_SHA256_Ed25519        | Y | RFC XXXX |
+| 0x0002          | MLS_128_DHKEMP256_AES128GCM_SHA256_P256             | Y | RFC XXXX |
+| 0x0003          | MLS_128_DHKEMX25519_CHACHA20POLY1305_SHA256_Ed25519 | Y | RFC XXXX |
+| 0x0004          | MLS_256_DHKEMX448_AES256GCM_SHA512_Ed448            | Y | RFC XXXX |
+| 0x0005          | MLS_256_DHKEMP521_AES256GCM_SHA512_P521             | Y | RFC XXXX |
+| 0x0006          | MLS_256_DHKEMX448_CHACHA20POLY1305_SHA512_Ed448     | Y | RFC XXXX |
+| 0x0007          | MLS_256_DHKEMP384_AES256GCM_SHA384_P384.            | Y | RFC XXXX |
+| 0xf000 - 0xffff | Reserved for Private Use                            | - | RFC XXXX |
+
+##### Ciphersuites (Composition)
+
+| Value  | KEM    | KDF    | AEAD   | Hash   | Signature              |
+|--------|--------|--------|--------|--------|------------------------|
+| 0x0001 | 0x0020 | 0x0001 | 0x0001 | SHA256 | ed25519                |
+| 0x0002 | 0x0010 | 0x0001 | 0x0001 | SHA256 | ecdsa_secp256r1_sha256 |
+| 0x0003 | 0x0020 | 0x0001 | 0x0003 | SHA256 | ed25519                |
+| 0x0004 | 0x0021 | 0x0003 | 0x0002 | SHA512 | ed448                  |
+| 0x0005 | 0x0012 | 0x0003 | 0x0002 | SHA512 | ecdsa_secp521r1_sha512 |
+| 0x0006 | 0x0021 | 0x0003 | 0x0003 | SHA512 | ed448                  |
+| 0x0007 | 0x0011 | 0x0002 | 0x0002 | SHA384 | ecdsa_secp384r1_sha384 |
+
+##### KEM
+
+...
+
+##### Key Derivation Functions (KDFs)
+  
+| Value  | KDF         | Nh  | Reference |
+|--------|-------------|-----|-----------|
+| 0x0000 | Reserved    | N/A | RFC 9180  |
+| 0x0001 | HKDF-SHA256 | 32  | RFC 5869  |
+| 0x0002 | HKDF-SHA384 | 48  | RFC 5869  |
+| 0x0003 | HKDF-SHA512 | 64  | RFC 5869  |
+
+##### AEAD
+
+...
+
+</details>
+
+<details>
   <summary><a name="concept_commit">Commit</a></summary>
   
 ...

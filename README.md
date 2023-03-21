@@ -404,6 +404,61 @@ graph TD;
 ...
 </details>
 
+<details>
+  <summary><a name="concept_psk">Pre-Shared Key (PSK)</a></summary>
+
+**Valid in Welcome**
+
+* Resumption/Branch -> When Subgroup branching
+* Resumption/Reinit -> When Reinit
+
+**Valid in Proposal**
+
+* Only Resumption/Application
+
+```c
+struct {
+    PreSharedKeyID psk;
+} PreSharedKey;
+
+struct {
+  PSKType psktype;
+  select (PreSharedKeyID.psktype) {
+    case external:
+      opaque psk_id<V>;
+
+    case resumption:
+      ResumptionPSKUsage usage;
+      opaque psk_group_id<V>;
+      uint64 psk_epoch;
+  };
+  opaque psk_nonce<V>; // MUST be of length `KDF.Nh`.
+} PreSharedKeyID;
+
+enum {
+  reserved(0),
+  external(1),
+  resumption(2),
+  (255)
+} PSKType;
+
+enum {
+  reserved(0),
+  application(1), // Only valid in proposal.
+  reinit(2),      // Only valid in Welcome (during Reinitialization).
+  branch(3),      // Only valid in Welcome (during Subgroup Branching)
+  (255)
+} ResumptionPSKUsage;
+```
+</details>
+
+
+<details>
+  <summary><a name="concept_proposal">Proposal</a></summary>
+  
+...
+</details>
+
 ## R
 
 <details>
